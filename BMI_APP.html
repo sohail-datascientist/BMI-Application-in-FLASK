@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BMI Calcultor</title>
+</head>
+<style type="text/css">
+	.bmi_cal{
+		padding-top: 10px;
+		padding-bottom: 20px;
+		width: 40%;
+		height: 100%;
+		text-align: center;
+		border-right: solid;
+		border-top: solid;
+		border-bottom: solid;
+		border-left: solid;
+	}
+</style>
+<body>
+	<div class="bmi_cal">
+		<form method="POST" action="/">
+			<h1 style="text-align: center;">BMI Calculator</h1>
+			<label>Enter Your Name</label>
+			<input type="text" name="username"><br><br>
+
+			<label>Enter Your Weight in kg</label>
+			<input type="text" name="weight"><br><br>
+
+			<label>Enter Your Weight in Height in cm</label>
+			<input type="text" name="height"><br><br>
+
+			<button type="submit" value="Submit"> Submit</button>
+		</form>
+	</div>
+
+	<div>
+		{% if bmi %}
+			<p> Hello Dear {{name}}</p>
+			<p>Your BMI is  {{bmi}}</p>
+		{% endif %}
+	</div>
+
+</body>
+</html>
